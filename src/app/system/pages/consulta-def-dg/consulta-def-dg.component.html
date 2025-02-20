@@ -1,0 +1,43 @@
+<div class="consulta-container">
+    <div class="formulario">
+      <h2>Consulta Defunción por Datos Generales</h2>
+      <form (ngSubmit)="consultar()">
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input type="text" [(ngModel)]="form.nombre" name="nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label>Primer Apellido:</label>
+          <input type="text" [(ngModel)]="form.primerAp" name="primerAp" required />
+        </div>
+
+        <div class="form-group">
+          <label>Segundo Apellido:</label>
+          <input type="text" [(ngModel)]="form.segundoAp" name="segundoAp" required />
+        </div>
+
+        <div class="form-group">
+          <label>Año de Nacimiento:</label>
+          <input type="number" [(ngModel)]="form.anoNac" name="anoNac" min="1000" max="9999" required />
+        </div>
+
+        <div class="form-group">
+          <label>Mes de Nacimiento:</label>
+          <input type="number" [(ngModel)]="form.mesNac" name="mesNac" min="1" max="12" required />
+        </div>
+
+        <div class="form-group">
+          <label>Día de Nacimiento:</label>
+          <input type="number" [(ngModel)]="form.diaNac" name="diaNac" min="1" max="31" required />
+        </div>
+
+        <button type="submit" class="btn-consultar">Consultar</button>
+      </form>
+    </div>
+
+    <div class="resultado">
+      <h3>Resultado</h3>
+      <pre>{{ resultado }}</pre>
+    </div>
+  </div>

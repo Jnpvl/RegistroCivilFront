@@ -1,0 +1,18 @@
+<div class="consulta-container">
+    <div class="formulario">
+      <h2>Consulta Defunción por CURP</h2>
+      <form (ngSubmit)="consultar()">
+        <div class="form-group">
+          <label>CURP:</label>
+          <input type="text" [(ngModel)]="form.curp" name="curp" required />
+        </div>
+
+        <button type="submit" class="btn-consultar">Consultar</button>
+      </form>
+    </div>
+
+    <div class="resultado">
+      <h3>Resultado</h3>
+      <pre>{{ resultado }}</pre>
+    </div>
+  </div>

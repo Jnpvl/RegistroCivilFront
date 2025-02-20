@@ -1,0 +1,79 @@
+<div class="consulta-container">
+    <div class="formulario">
+      <h2>Consulta Datos Matrimonio</h2>
+      <form (ngSubmit)="consultar()">
+        <div class="form-group">
+          <label>Nombre Persona 1:</label>
+          <input type="text" [(ngModel)]="form.nombre" name="nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label>Primer Apellido Persona 1:</label>
+          <input type="text" [(ngModel)]="form.primerAp" name="primerAp" required />
+        </div>
+
+        <div class="form-group">
+          <label>Segundo Apellido Persona 1:</label>
+          <input type="text" [(ngModel)]="form.segundoAp" name="segundoAp" required />
+        </div>
+
+        <div class="form-group">
+          <label>Nombre Persona 2:</label>
+          <input type="text" [(ngModel)]="form.nombre2" name="nombre2" required />
+        </div>
+
+        <div class="form-group">
+          <label>Primer Apellido Persona 2:</label>
+          <input type="text" [(ngModel)]="form.primerAp2" name="primerAp2" required />
+        </div>
+
+        <div class="form-group">
+          <label>Segundo Apellido Persona 2:</label>
+          <input type="text" [(ngModel)]="form.segundoAp2" name="segundoAp2" required />
+        </div>
+
+        <div class="form-group">
+          <label>Año Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.anoMat"
+            name="anoMat"
+            min="1000"
+            max="9999"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Mes Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.mesMat"
+            name="mesMat"
+            min="1"
+            max="12"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Día Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.diaMat"
+            name="diaMat"
+            min="1"
+            max="31"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-consultar">Consultar</button>
+      </form>
+    </div>
+
+    <div class="resultado">
+      <h3>Resultado</h3>
+      <pre>{{ resultado }}</pre>
+    </div>
+  </div>

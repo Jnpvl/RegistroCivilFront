@@ -1,0 +1,54 @@
+<div class="consulta-container">
+    <div class="formulario">
+      <h2>Consulta Datos Matrimonio por CURP</h2>
+      <form (ngSubmit)="consultar()">
+        <div class="form-group">
+          <label>CURP:</label>
+          <input type="text" [(ngModel)]="form.curp" name="curp" required />
+        </div>
+
+        <div class="form-group">
+          <label>Año Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.anoMat"
+            name="anoMat"
+            min="1000"
+            max="9999"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Mes Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.mesMat"
+            name="mesMat"
+            min="1"
+            max="12"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Día Matrimonio:</label>
+          <input
+            type="number"
+            [(ngModel)]="form.diaMat"
+            name="diaMat"
+            min="1"
+            max="31"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn-consultar">Consultar</button>
+      </form>
+    </div>
+
+    <div class="resultado">
+      <h3>Resultado</h3>
+      <pre>{{ resultado }}</pre>
+    </div>
+  </div>
